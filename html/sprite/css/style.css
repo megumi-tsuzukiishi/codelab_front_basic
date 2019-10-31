@@ -1,0 +1,58 @@
+nav {
+  width: 600px;
+  margin: 50px auto;
+}
+
+ul {
+  display: flex;
+  background: wheat;
+}
+
+li {
+  width: 100px;
+  height: 50px;
+  background: url(./sprite.png) no-repeat;
+  transition: .3s;
+}
+
+li:hover {
+  /* transition: .3s; */
+}
+
+/* 以下から記述する */
+.home {
+  background-position: 0 0;
+}
+.home:hover {
+  background-position: 0 -50px;
+}
+.about {
+  background-position: -100px 0;
+}
+.about:hover {
+  background-position: -100px -50px;
+}
+.service {
+  background-position: -200px 0;
+}
+.service:hover {
+  background-position: -200px -50px;
+}
+.contact {
+  background-position: -300px 0;
+}
+.contact:hover {
+  background-position: -300px -50px;
+}
+.news {
+  background-position: -400px 0;
+}
+.news:hover {
+  background-position: -400px -50px;
+}
+.blog {
+  background-position: -500px 0;
+}
+.blog:hover {
+  background-position: -500px -50px;
+}
