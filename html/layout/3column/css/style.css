@@ -4,6 +4,7 @@ body {
 }
 * {
   /* box-sizing: border-box; */
+  /* ↑これがあるとレイアウトが崩れてしまう‥‥ */
 }
 .wrap {
   max-width: calc(1280/1920*100%);
