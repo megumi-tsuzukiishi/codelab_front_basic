@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <title>テーブル＋フォーム</title>
+  <meta name="description" content="">
+  <meta name="keywords" content="">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css">
+  <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+  <div class="container">
+    <h1>フォーム練習</h1>
+    <h2>お問い合わせ</h2>
+    <table>
+      <tr>
+        <td class="thead"><label for="name">お名前</label></td>
+        <td>
+          <input type="text" name="name" id="name">
+        </td>
+      </tr>
+      <tr>
+        <td class="thead"><label for="address">ご住所</label></td>
+        <td>
+          <input type="text" name="address" id ="address">
+        </td>
+      </tr>
+      <tr>
+        <td class="thead">性別</td>
+        <td>
+          <label><input type="radio" name="gender" value="man" checked="checked">男性</label>
+          <label><input type="radio" name="gender" value="woman" >女性</label>
+        </td>
+      </tr>
+      <tr>
+        <!-- ↓お問い合わせ種別はラベル付けても意味無さそうだったので付けてません↓ -->
+        <td class="thead">お問い合わせ種別</td>
+        <td>
+          <select name="type">
+            <option value="資料請求">資料請求</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td class="thead">ご希望の連絡方法<br>(複数洗濯可)</td>
+        <td>
+          <label><input type="checkbox" name="check" value="メール">メール</label>
+          <label><input type="checkbox" name="check" value="電話">電話</label>
+          <label><input type="checkbox" name="check" value="訪問">訪問</label>
+        </td>
+      </tr>
+      <tr>
+        <td class="thead"><label for="details">お問い合わせ内容</label></td>
+        <td>
+          <textarea name ="details" rows="8" id="details"></textarea>
+        </td>
+      </tr>
+    </table>
+    <input type="submit" value="送信" id="submit">
+  </div>
+</body>
+</html>

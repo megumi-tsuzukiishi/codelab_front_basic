@@ -1,0 +1,89 @@
+html {
+  height: 100%;
+}
+
+body {
+  position: relative;
+  background: black;
+  height: 100%;
+}
+
+.container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 450px;
+  background: white;
+  transform: translateY(-50%) translateX(-50%);
+}
+
+h1 {
+  font-size:20px;
+}
+
+h2 {
+  font-size: 14px;
+}
+
+h1, h2 {
+  margin: 15px;
+  font-weight: bold;
+  text-align: center;
+}
+
+table {
+  width: 400px;
+  margin: 0 auto;
+  line-height: 150%;
+  font-size: 10px;
+}
+
+td {
+  width: 100%;
+  padding: 5px;
+  border: 3px solid #bcbcbc;
+  vertical-align: middle;
+}
+
+.thead {
+  width: 30%;
+  background: #d3d3d3;
+  font-weight: bold;
+}
+
+/* チェックボックスとラジオボタンを上下中央寄せにする */
+td:not(.thead) label {
+  display: inline-block;
+  position: relative;
+  padding-left: 1.5em;
+}
+label input {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  margin: auto;
+}
+
+input[type="text"], textarea {
+  width: 90%;
+}
+
+select {
+  font-size: 10px;
+}
+
+textarea {
+  resize: none;
+}
+
+#submit {
+  display: block;
+  width: 120px;
+  height: 40px;
+  margin: 30px auto;
+  border: 1px solid white;
+  background: #1d90ff;
+  color: white;
+  font-size: 10px;
+}
