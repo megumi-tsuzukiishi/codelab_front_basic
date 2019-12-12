@@ -1,0 +1,238 @@
+$background_color1: #858585;
+
+html {
+  font-size: 62.5%;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Yu Gothic;
+  font-weight: bold;
+  background: url(../img/bg_tekusu.jpg) repeat;
+}
+
+// アイコン画像
+.sprite {
+  width: 32px;
+  height: 32px;
+  margin-left: 3px;
+  line-height: 32px;
+  background: url(../img/sprite.png) no-repeat;
+}
+
+.twitter {
+  transition: .3s;
+}
+
+.twitter:hover {
+  background-position: 0 -32px;
+}
+
+.facebook {
+  background-position: -32px 0;
+  transition: .3s;
+}
+
+.facebook:hover {
+  background-position: -32px -32px;
+}
+
+.login {
+  background-position: -64px -32px;
+}
+
+.find {
+  background-position: -64px 0;
+}
+
+.rank {
+  background-position: -96px 0;
+}
+// アイコン画像ここまで
+
+// 上下のジグザグ
+.zigzag {
+  position: relative;
+  background: url(../img/bg_tekusu.jpg) repeat;
+  .container {
+    padding-top: 50px;
+  }
+}
+
+.zigzag::before,
+.zigzag::after {
+  height: 9px;
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 100%;
+}
+
+.zigzag::before {
+  top: -3px;
+  background: linear-gradient(135deg, $background_color1 5px, transparent 0), linear-gradient(225deg, $background_color1 5px, transparent 0);
+  background-size: 10px 10px;
+}
+
+.zigzag::after {
+  bottom: 0;
+  background: linear-gradient(45deg, $background_color1 5px, transparent 0), linear-gradient(315deg, $background_color1 5px, transparent 0);
+  background-size: 10px 10px;
+}
+// ジグザグここまで
+
+header,
+footer {
+  background: $background_color1;
+  color: white;
+  height: 100px;
+}
+
+header {
+  .container {
+    height: 100px;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .top-left {
+    h1 {
+      font-size: 2.8rem;
+      margin-bottom: 5px;
+    }
+    h2 {
+      font-size: 2.4rem;
+      opacity: 0.6;
+    }
+  }
+  .top-right{
+    display: flex;
+    align-items: center;
+    p {
+      font-size: 2.8rem;
+      margin-right: 10px;
+      span {
+        font-weight: normal;
+      }
+    }
+
+  }
+}
+
+.container {
+  width: 980px;
+  margin: 0 auto;
+}
+
+main,
+.container,
+form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.white-box {
+  display: flex;
+  background: white;
+  width: 100%;
+  padding: 10px;
+  margin: 1px;
+  font-size: 1.4rem;
+  align-items: center;
+}
+
+nav {
+  ul {
+    width: 160px;
+    li {
+      a {
+        text-decoration: none;
+      }
+    }
+    li:not(.white-box) {
+      margin: 7px 0;
+      font-size: 1.2rem;
+    }
+    form {
+      input {
+        width: 80px;
+        border: none;
+        margin-left: 5px;
+      }
+      input:focus {
+        outline: 0;
+        border: 3px solid #6DA0FA;
+        border-radius: 2px;
+      }
+    }
+  }
+}
+
+.center {
+  width: 700px;
+  padding: 20px 30px;
+  h3 {
+    font-size: 2.2rem;
+  }
+  p {
+    margin: 10px 5px 15px;
+    font-size: 1.2rem;
+    line-height: 1.6;
+  }
+  h4 {
+    font-size: 1.8rem;
+    margin: 15px 10px;
+    padding-left: 15px;
+    padding-top: 2px;
+    border-left: 5px solid black;
+  }
+  img {
+    width: 510px;
+  }
+}
+
+.right {
+  width: 100%;
+  h3 {
+    font-size: 2.0rem;
+  }
+  > p {
+    margin: 10px 0 13px;
+    font-size: 1.3rem;
+  }
+  .white-box {
+    margin-bottom: 3px;
+  }
+  .ranking {
+    display: flex;
+    justify-content: center;
+    font-size: 1.6rem;
+  }
+  ol {
+    margin-top: 4px;
+    margin-bottom: 20px;
+    li td {
+    font-size: 1.3rem;
+    padding-right: 10px;
+    line-height: 1.2;
+    }
+  }
+  ul li a{
+    font-size: 1.3rem;
+    text-decoration: none;
+    color: inherit;
+    padding-left: 40px;
+  }
+}
+
+footer {
+  line-height: 100px;
+  text-align: center;
+  font-size: 1.3rem;
+  font-weight: normal;
+}
