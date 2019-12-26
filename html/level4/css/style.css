@@ -1,0 +1,472 @@
+@charset "UTF-8";
+html {
+  font-size: 62.5%;
+  background: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #F3F3F3;
+  width: 144.0rem;
+  margin: 0 auto;
+  color: #676767;
+  font-size: 1.6rem;
+  font-weight: bold;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+body p {
+  font-size: 1.5rem;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+body a {
+  text-decoration: none;
+}
+
+.container {
+  width: 117.0rem;
+  margin: 0 auto;
+}
+
+.pink-box {
+  background: #C64C85;
+  color: white;
+}
+
+@keyframes shake {
+  0% {
+    transform: translate(0px, 0.4rem);
+  }
+  50% {
+    transform: translate(0px, -0.4rem);
+  }
+  100% {
+    transform: translate(0px, 0.4rem);
+  }
+}
+
+header {
+  background-image: url(../images/slider_img.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  width: 144.0rem;
+  height: 78.0rem;
+  color: white;
+  margin: 0 auto;
+}
+
+header .container {
+  display: flex;
+  justify-content: space-between;
+}
+
+header .container .top-left .title {
+  margin: 10.5rem;
+}
+
+header .container .top-left h1 {
+  font-size: 5.0rem;
+  margin-top: 1.7rem;
+  letter-spacing: -0.2rem;
+}
+
+header .container .top-left h2 {
+  font-size: 7.5rem;
+  letter-spacing: -0.2rem;
+  margin-bottom: 3.2rem;
+}
+
+header .container .top-left h2 span {
+  font-size: 9.0rem;
+  letter-spacing: -1.0rem;
+}
+
+header .container nav {
+  background: #C64C85;
+  height: 100%;
+  width: 30%;
+  padding: 5.5rem 6.0rem;
+}
+
+header .container nav ul li a {
+  color: inherit;
+  font-size: 2.5rem;
+  line-height: 1.4;
+}
+
+main a {
+  font-size: 1.3rem;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+}
+
+main .container .about {
+  display: flex;
+  margin-bottom: -6.0rem;
+}
+
+main .container .about .flex {
+  position: relative;
+  top: -13.0rem;
+  background: white;
+  height: 48.0rem;
+}
+
+main .container .about .flex .about-text1 {
+  margin: 2.8rem 3.5rem;
+  float: right;
+}
+
+main .container .about .flex .about-text1 h2 {
+  font-size: 3.2rem;
+}
+
+main .container .about .flex .about-text1 h2 span {
+  font-size: 5.0rem;
+  vertical-align: middle;
+}
+
+main .container .about .flex .about-text1 a {
+  color: #C64C85;
+  font-size: 1.4rem;
+  line-height: 4.0;
+}
+
+main .container .about .flex .about-img1 {
+  position: relative;
+  top: -13.5rem;
+  left: 3.5rem;
+}
+
+main .container .about .flex .about-text2 {
+  width: 92%;
+  margin-top: -9.5rem;
+  margin-left: 3.5rem;
+  line-height: 1.8;
+}
+
+main .container .about .flex .about-text2 h3 {
+  font-size: 4.0rem;
+}
+
+main .container .about .flex .about-text2 p {
+  letter-spacing: 0.1rem;
+  font-size: 1.4rem;
+}
+
+main .container .about .flex .about-text2 .button {
+  display: inline-block;
+  background: #d2739f;
+  margin-top: 1.0rem;
+  padding: 0.9rem 2.0rem;
+  box-shadow: 0 0.4rem #C64C85;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+main .container .about .about-img2 {
+  position: relative;
+  top: -9.0rem;
+  margin-right: -5.0rem;
+}
+
+main .container .course {
+  background-image: url(../images/feature_bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 0 -13.5rem;
+  padding: 0 13.5rem;
+  height: 70.0rem;
+  color: white;
+}
+
+main .container .course .course-text {
+  padding: 11.0rem 0 7.5rem;
+  text-align: center;
+}
+
+main .container .course .course-text h2 {
+  font-size: 4.4rem;
+  margin-bottom: 2.0rem;
+}
+
+main .container .course .course-text p {
+  font-size: 2.0rem;
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+main .container .course .courses {
+  display: flex;
+}
+
+main .container .course .courses .course1 {
+  padding: 0 2.0rem;
+  text-align: center;
+}
+
+main .container .course .courses .course1 .fas {
+  font-size: 10.0rem;
+}
+
+main .container .course .courses .course1 h3 {
+  margin: 2.8rem 0 1.0rem;
+  font-size: 3.0rem;
+}
+
+main .container .course .courses .course1 p {
+  line-height: 1.5;
+}
+
+main .container .course .courses .course1 .button {
+  display: inline-block;
+  margin: 2.8rem;
+  padding: 1.5rem 2.0rem;
+  box-shadow: 0 0.4rem #822a53;
+  font-size: 1.4rem;
+  letter-spacing: 0.2rem;
+}
+
+main .container .sculpture {
+  text-align: center;
+}
+
+main .container .sculpture h2 {
+  font-size: 4.0rem;
+  margin: 8.0rem 0 5.0rem;
+}
+
+main .container .sculpture .programs {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+main .container .sculpture .programs .program {
+  position: relative;
+  margin-bottom: 12.5rem;
+  width: -webkit-calc((100%-10rem) / 3);
+  width: calc(95% / 3);
+}
+
+main .container .sculpture .programs .program .pink-box {
+  position: absolute;
+  bottom: -2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 1.9rem;
+  width: 32.0rem;
+}
+
+main .container .sculpture .programs .program .pink-box h3 {
+  font-size: 2.2rem;
+  padding-bottom: 0.5rem;
+}
+
+main .container .sculpture .programs .program .pink-box p {
+  font-family: "游明朝", YuMincho, "Hiragino Mincho ProN W3", "ヒラギノ明朝 ProN W3", "Hiragino Mincho ProN", "HG明朝E", "ＭＳ Ｐ明朝", "ＭＳ 明朝", serif;
+}
+
+main .container .circles {
+  position: relative;
+  background-image: url(../images/coaches_bg.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  margin: 10rem -13.5rem 0;
+  padding: 0 13.5rem;
+  height: 67.0rem;
+}
+
+main .container .circles .circle {
+  display: inline-block;
+  position: relative;
+  background: linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -webkit-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -moz-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -o-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  text-align: center;
+  border-radius: 50%;
+  color: white;
+  font-size: 3.0rem;
+}
+
+main .container .circles .coach {
+  display: inline-block;
+  position: relative;
+  border-radius: 50%;
+}
+
+main .container .circles .c1 {
+  width: 12.0rem;
+  height: 12.0rem;
+  line-height: 12.0rem;
+  top: -10.0rem;
+  left: 1.7rem;
+}
+
+main .container .circles .c2 {
+  top: 0.5rem;
+  left: 4.0rem;
+}
+
+main .container .circles .c3 {
+  top: 7.0rem;
+  left: 7.0rem;
+}
+
+main .container .circles .c4 {
+  top: 0.7rem;
+  left: 8.0rem;
+}
+
+main .container .circles .c5 {
+  top: 10.0rem;
+  left: 8.0rem;
+}
+
+main .container .circles .c6 {
+  width: 11.0rem;
+  height: 11.0rem;
+  line-height: 11.0rem;
+  top: -4.5rem;
+  left: 7.2rem;
+}
+
+main .container .circles .c7 {
+  top: 11.1rem;
+  left: -96.0rem;
+}
+
+main .container .circles .c8 {
+  top: -3.1rem;
+  left: 20.0rem;
+}
+
+main .container .circles .c9 {
+  top: 2.1rem;
+  left: 21.0rem;
+}
+
+main .container .circles .c10 {
+  width: 18.0rem;
+  height: 18.0rem;
+  line-height: 18.0rem;
+  top: -12.0rem;
+  left: 22.2rem;
+}
+
+main .container .circles .c11 {
+  top: 2.3rem;
+  left: 23.7rem;
+}
+
+main .container .circles .c12 {
+  top: -3.5rem;
+  left: 24.0rem;
+}
+
+main .container .circles .c13 {
+  top: 8.5rem;
+  left: -89.6rem;
+}
+
+main .container .circles .circle:hover {
+  cursor: default;
+  animation: shake 0.4s infinite;
+}
+
+main .container .circles .coach:hover {
+  animation: shake 0.4s infinite;
+}
+
+footer {
+  background: linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -webkit-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -moz-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+  background: -o-linear-gradient(left, #8165a6, #d83f87) repeat scroll 0 0;
+}
+
+footer .container {
+  display: flex;
+}
+
+footer .container .footer-left {
+  display: flex;
+  background: #F3F3F3;
+  margin-left: -13.5rem;
+  padding-left: 13.5rem;
+  padding-right: 2.0rem;
+  height: 45.0rem;
+}
+
+footer .container .footer-left img {
+  position: relative;
+  top: 7.0rem;
+  left: -1.0rem;
+  height: 100%;
+}
+
+footer .container .footer-left .footer-left-text {
+  position: relative;
+  top: 6.5rem;
+  left: 2.0rem;
+  width: 35.0rem;
+  margin-left: -35.0rem;
+  padding-right: 1.0rem;
+}
+
+footer .container .footer-left .footer-left-text h2 {
+  font-size: 3.8rem;
+  margin-bottom: 1.5rem;
+}
+
+footer .container .footer-left .footer-left-text p {
+  line-height: 1.8;
+}
+
+footer .container nav {
+  display: flex;
+  justify-content: space-between;
+  color: white;
+  padding-top: 5.0rem;
+  padding-left: 4.5rem;
+  width: 100%;
+}
+
+footer .container nav h2 {
+  font-size: 3.0rem;
+  padding-bottom: 2.5rem;
+}
+
+footer .container nav a {
+  color: inherit;
+  font-size: 1.4rem;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 2.2;
+}
+
+footer .container nav li {
+  font-size: 1.5rem;
+  font-family: "ヒラギノ角ゴ ProN W3", "Hiragino Kaku Gothic ProN", "メイリオ", "Meiryo", "verdana", sans-serif;
+  line-height: 2.2;
+}
+
+footer .container nav li i {
+  padding-right: 0.5rem;
+}
+
+footer > p {
+  display: block;
+  height: 10.0rem;
+  padding: 10.0rem 0 7.0rem;
+  text-align: center;
+  font-size: 1.3rem;
+}
+
+footer > p span {
+  color: white;
+  font-size: 1.6rem;
+}
