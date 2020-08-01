@@ -1,0 +1,942 @@
+html {
+  font-size: 62.5%;
+  background-color: black;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  max-width: 375px;
+  margin: 0 auto;
+  font-size: 1.4rem;
+  background-color: white;
+  h1,
+  h2,
+  h3,
+  p,
+  a {
+    text-align: center;
+    text-decoration: none;
+  }
+  > i {
+    font-size: 2.8rem;
+    transform: scale(1.5, 1);
+    color: orangered;
+    position: absolute;
+    text-align: left;
+    margin-top: 2rem;
+    margin-left: 3.5rem;
+    z-index: 2;
+  }
+}
+// ハンバーガーメニュー
+#mask {
+  background: grey;
+  opacity: .6;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 1;
+  display: none;
+}
+
+#menu {
+  z-index: 2;
+  position: fixed;
+  top: -1000px;
+  color: white;
+  background: orangered;
+  padding: 0.8rem;
+  margin: 0 auto;
+  width: 375px;
+  transition: .6s;
+  li {
+    padding: 2rem 3rem;
+  }
+  li:first-child {
+    padding-top: 4rem;
+  }
+  li + li {
+    border-top: 1px solid white;
+  }
+}
+
+#open {
+  position: fixed;
+}
+
+#close {
+  position: absolute;
+}
+
+#open,
+#close {
+  top: 1.0rem;
+  cursor: pointer;
+  font-size: 3.0rem;
+  padding: 0;
+}
+
+body.active {
+  overflow-y: hidden;
+  #mask {
+    display: block;
+  }
+  #menu {
+    top: 0;
+  }
+}
+// ハンバーガーメニューここまで
+
+// スクロールして可動範囲に入ったらアニメーション
+.fadein {
+  opacity: 0;
+  transform: translate(0, 5.0rem);
+  transition: all 1s;
+}
+.fadein.active{
+  opacity: 1;
+  transform: translate(0, 0);
+}
+// スクロールして可動範囲に入ったらアニメーションここまで
+
+h1,
+h2 {
+  font-size: 2.0rem;
+  font-weight: 900;
+  letter-spacing: 0.3rem;
+}
+
+h2 {
+  margin: 3.6rem auto 0;
+}
+
+h3 {
+  font-size: 2.0rem;
+  letter-spacing: 0.2rem;
+  margin: 4.0rem auto 2.5rem;
+}
+
+p {
+  line-height: 2;
+  letter-spacing: 0.1rem;
+  color: #4D4D4D;
+}
+
+.border {
+  display: block;
+  width: 10.0rem;
+  border-bottom: 0.1rem solid;
+  margin: 3.6rem auto 3.4rem;
+}
+
+.white-box {
+  color: white;
+  font-size: 1.6rem;
+  font-weight: 900;
+  border: 0.3rem solid;
+  width: 20.0rem;
+  height: 4.4rem;
+  line-height: 4.0rem;
+}
+//　アニメーション3,4,8ここから
+//////////　このアニメーションの動きがうまく指定出来ませんでした
+.white-box.active {
+  animation: rotateX 1s ease;
+  transform-style: preserve-3d;  // これの指定場所が違う？
+  perspective: 80.0rem;
+}
+@keyframes rotateX {
+  0% {
+    transform: rotateX(-90deg);
+  }
+  50% {
+    transform: rotateX(45deg);
+  }
+  100% {
+    transform: rotateX(0deg);
+  }
+}
+//　アニメーション3,4,8ここまで
+
+header {
+  background-image: url(../img/mouse.png), url(../img/banner.jpg);
+  background-repeat: no-repeat;
+  background-size: auto, cover;
+  background-position: left 50% top 95%, center;
+  height: 40.0rem;
+  color: white;
+  padding: 0 1.0rem;
+  position: relative;
+  h1 {
+    display: inline-block;
+    margin: 10.7rem auto 0;
+    width: 100%;
+    animation: headanime ease-in 0.5s 0s;
+  }
+  p {
+    color: white;
+    animation: headanime ease-in 0.5s 0.1s;
+  }
+  .border {
+    margin: 1.5rem auto 2.0rem;
+    animation: headanime ease-in 0.5s 0.2s;
+  }
+  // アニメーション1ここから
+  /////////ここのアニメーションをもうちょっと綺麗にしたい‥‥
+  @keyframes headanime{
+    0% {
+      transform: scale(0, 0);
+    }
+    50% {
+      transform: scale(1.2, 1.2);
+    }
+    75% {
+      transform: scale(0.9, 0.9);
+    }
+    85% {
+      transform: scale(1.1, 1.1);
+    }
+    95% {
+      transform: scale(0.95, 0.95);
+    }
+    100% {
+      transform: scale(1, 1);
+    }
+  }
+  // アニメーション1ここまで
+}
+
+
+
+section >.text {
+  display: block;
+  margin-bottom: 2.8rem;
+}
+
+.introduction {
+  .intro-text {
+    height: 25.5rem;
+    .border {
+      margin: 3.0rem auto 2.7rem;
+    }
+    p:not(.border) {
+      padding: 0.5rem;
+    }
+  }
+  .intro-more {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(../img/lepy.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 25.0rem;
+    text-align: center;
+  }
+  // アニメーション2ここから
+  .fadein {
+    transform: scale(0);
+  }
+  .fadein.active {
+    transform: scale(1);
+  }
+  .border.active {
+    transition-delay: 0.1s;
+    animation: rotate 1s linear;
+  }
+  .text.active {
+    transition-delay: 0.2s;
+  }
+  @keyframes rotate {
+    0% {
+      transform: translate(-5.0rem, 0) rotate(270deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  // アニメーション2ここまで
+}
+
+.works {
+  h2 {
+    margin: 3.6rem auto 0rem;
+  }
+  .border {
+    margin: 3.6rem auto 3.4rem;
+  }
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0 4.0rem;
+    li {
+      display: inline-block;
+      margin: 0 0.5rem 0.7rem;
+      font-size: 1.6rem;
+      span {
+        font-weight: bold;
+      }
+    }
+  }
+  .work {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    .work-img {
+      position: relative;
+      width: 45%;
+      margin: 0 0.3rem 1.5rem;
+      img {
+        width: 100%;
+      }
+      .mask {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;	
+        background-color:	rgba(0,0,0,0.4);
+        -webkit-transition:	all 0.2s ease;
+        transition: all 0.2s ease;
+      }
+      .caption {
+        font-size: 2.0rem;
+        text-align: center;
+        color: white;
+        line-height: 0.5;
+        p {
+          padding-top: 33%;
+          font-size: 1.6rem;
+          font-weight: bold;
+          color: white;
+          letter-spacing: 0;
+        }
+        .border {
+          width: 20%;
+          margin: 2.5rem auto;
+          border-bottom: solid 0.1rem orangered;
+        }
+      }
+    }
+    .work-img:hover .mask {
+      opacity: 1;	/* マスクを表示する */
+      border: solid 0.5rem black;
+    }
+  }
+  .more {
+    display: block;
+    font-weight: 900;
+    border: 0.3rem solid;
+    font-size: 2.0rem;
+    margin: 5.0rem auto 3.0rem;
+    padding: 1.5rem 0;
+    width: 80%;
+    color: black;
+  }
+  .help {
+    background-image: url(../img/helo.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25.0rem;
+  }
+}
+
+.clients {
+  background: #F4F4F4;
+  padding: 3.6rem 0 2.0rem;
+  h2 {
+    margin: 0;
+  }
+  .border {
+    margin: 3.6rem auto 4.0rem;
+  }
+  // アニメーション5ここから
+  // ↓これを入れないと下から出てくる
+  .fadein {
+    transform: scale(0);
+  }
+  .fadein.active{
+    transform : scale(1);
+  }
+  // アニメーション5ここまで
+  .client {
+    img {
+      display: block;
+      margin: 0 auto;
+      padding-bottom: 2.9rem;
+    }
+    // アニメーション5ここから
+    .fadein:first-child {
+      transition-delay: 0.5s;
+    }
+    .fadein:nth-child(2) {
+      transition-delay: 0.7s;
+    }
+    .fadein:nth-child(3) {
+      transition-delay: 0.9s;
+    }
+    .fadein:nth-child(4) {
+      transition-delay: 1.1s;
+    }
+    .fadein:nth-child(5) {
+      transition-delay: 1.3s;
+    }
+    // アニメーション5ここまで
+  }
+}
+
+.about-us {
+  // アニメーション6ここから
+  .fadein:not(.border).active {
+    animation: Flash 1.5s 1.3s 3;
+  }
+  .fadein:first-child.active {
+    animation: Flash 1.5s 1s 3;
+  }
+  @keyframes Flash {
+    0%, 50%, 100% {
+      opacity: 1;
+    }
+    33%, 66% {
+      opacity: 0;
+    }
+  }
+  // アニメーション6ここまで
+  .border {
+    margin: 3.6rem auto 3.2rem;
+  }
+  .text {
+    padding: 0 0.5rem;
+  }
+  .about {
+    margin-top: 4.5rem;
+    img {
+      width: 100%;
+      padding: 0.4rem 1.5rem;
+    }
+  }
+  .apply {
+    border: 0.2rem solid;
+    margin: 0.4rem 1.5rem;
+    height: 35.0rem;
+    padding: 9.5rem 0;
+    text-align: center;
+    h3 {
+      font-size: 2.2rem;
+      font-weight: 900;
+    }
+    .border {
+      margin: 3.2rem auto 3.0rem;
+    }
+    a {
+      display: inline-block;
+      border: 0.3rem solid;
+      font-weight: 900;
+      padding: 1.3rem 10.0rem;
+      color: black;
+    }
+  }
+}
+
+.video {
+  position: relative;
+  margin-top: 3.0rem;
+  .video-img {
+    width: 37.5rem;
+    height: 30.0rem;
+    object-fit: cover;
+  }
+  .play {
+    position: absolute;
+    top: 43%;
+    left: 50%;
+    transform: translate(-50%, -43%);
+  }
+}
+
+.choose-us {
+  // アニメーション7ここから
+  .choose-us-top {
+    .fadein.active {
+      animation: shake 0.2s 0.1s 3;
+    }
+    .fadein:first-child.active {
+      animation: shake 0.2s 0s 3;
+    }
+    .fadein:last-child.active {
+      animation: shake 0.2s 0.2s 3;
+    }
+    @keyframes shake {
+      33% {
+        transform: translateX(-1.0rem);
+      }
+      66% {
+        transform: translateX(1.0rem);
+      }
+    }
+    // アニメーション7ここまで
+    .border {
+      margin: 3.6rem auto 3.2rem;
+    }
+    .text {
+      padding: 0 0.5rem;
+    }
+  }
+  .app-designs {
+    display: block;
+    width: 37.5rem;
+    margin: 0 auto;
+    // slickここから
+    .design {
+      display: block;
+      width: 37.5rem !important;
+      margin: 0 auto;
+      padding: 0 1.0rem;
+    }
+    button:focus {
+      outline: 0;
+    }
+    .slick-dots {
+      text-align: center;
+      margin-bottom: 5.0rem;
+      li {
+        display: inline-block;
+        button {
+          position: relative;
+          text-indent: -9999px;
+          width: 3.0rem;
+          height: 3.0rem;
+          overflow: visible;
+          border: none;
+          background: none;
+          margin: 0;
+          padding: 0;
+        }
+        button:before {
+          display: block;
+          cursor: pointer;
+          content: '';
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          border-radius: 50%;
+          background: #D8D8D8;
+          width: 1.2rem;
+          height: 1.2rem;
+        }
+      }
+      .slick-active button:before {
+        background: orangered;
+      }
+    }
+    .design {
+      img {
+        display: block;
+        margin: 0 auto;
+      }
+      p {
+        line-height: 1.8;
+      }
+    }
+  }
+  // slickここまで
+  .quote {
+    background-image: url(../img/quotes.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 25.0rem;
+  }
+}
+
+.touch {
+  // アニメーション9ここから
+  .fadein {
+    transform: scale(0);
+  }
+  .fadein.active{
+    transform : scale(1);
+  }
+  .border.active {
+    transition-delay: 0.1s;
+  }
+  .text.active {
+    transition-delay: 0.2s;
+  }
+  // アニメーション9ここまで
+}
+
+.info {
+  .locations {
+    background: #F2F2F2;
+    height: 33.0rem;
+    .location {
+      h2 {
+        font-weight: 900;
+        letter-spacing: 0;
+        padding-top: 5.0rem;
+        padding-bottom: 2.0rem;
+      }
+      p {
+        font-size: 2.0rem;
+        line-height: 2;
+      }
+      ul {
+        display: flex;
+        justify-content: center;
+        li {
+          i {
+            font-size: 2.4rem;
+            margin: 2.0rem 1.2rem;
+          }
+        }
+      }
+    }
+  }
+  .forms {
+    height: 40.0rem;
+    padding: 1.8rem 1.0rem;
+    background: #E4E4E4;
+    input {
+      font-size: 1.6rem;
+      background: #E4E4E4;
+      width: 95%;
+      border: none;
+      border-bottom: solid 0.15rem #868686;
+      padding: 1.6rem;
+      margin: 0.5rem;
+    }
+    input[type="textarea"] {
+      padding: 8.0rem 1.6rem 3.5rem;
+    }
+    .submit {
+      display: flex;
+      justify-content: flex-end;
+      margin-top: 2.0rem;
+    }
+    input[type="submit"] {
+      width: 50%;
+      text-align: center;
+      font-size: 2.2rem;
+      padding: 1.2rem;
+      border: solid 0.3rem black;
+    }
+  }
+  // アニメーション10ここから
+  .locations.active {
+    animation: slidein1 1s;
+  }
+  .forms.active {
+    animation: slidein2 1s;
+  }
+  @keyframes slidein1 {
+    0% {
+      opacity: 0;
+      transform: translateX(-1000px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  @keyframes slidein2 {
+    0% {
+      opacity: 0;
+      transform: translateX(1000px);
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0);
+    }
+  }
+  // アニメーション10ここまで
+}
+
+footer {
+  background-color: #222222;
+  height: 22.5rem;
+  text-align: center;
+  img {
+    padding: 3.0rem 0rem 1.0rem 0.5rem;
+    width: 95%;
+  }
+  p {
+    padding: 0rem 2.0rem;
+    color: white;
+    span {
+      color: #BC6F45;
+    }
+  }
+}
+
+// 画面サイズ1280px以上の場合に適用
+@media (min-width: 1280px) {
+  body {
+    max-width: 100%;
+    font-size: 1.8rem;
+    h2 {
+      font-size: 2.7rem;
+    }
+  }
+
+  header {
+    height: 89.5rem;
+    background-position: left 50% top 90%, center;
+    h1 {
+      font-size: 4.5rem;
+      margin-top: 33.0rem;
+    }
+  }
+
+  .text {
+    width: 70.0rem;
+    margin: 0 auto;
+  }
+
+  .white-box {
+    font-size: 2.6rem;
+    width: 42.0rem;
+    height: 8.6rem;
+    line-height: 8.0rem;
+  }
+
+  .introduction {
+    .intro-text {
+      height: 36.0rem;
+      h2 {
+        margin: 12.6rem auto 6.5rem;
+      }
+      .border {
+        margin: 5.0rem auto;
+      }
+    }
+    .intro-more {
+      height: 48.5rem;
+    }
+  }
+
+  .works {
+    h2 {
+      margin: 13.0rem auto 6.5rem;
+    }
+    .border {
+      margin: 5.6rem auto;
+    }
+    ul {
+      li {
+        font-size: 2.2rem;
+        margin: 0 2.0rem 2.0rem;
+      }
+    }
+    .work {
+      max-width: 135.0rem;
+      margin: 0 auto;
+      .work-img {
+        width: 35.5rem;
+        margin: 0 1.0rem 3.0rem;
+      }
+    }
+    .more {
+      font-size: 2.0rem;
+      margin: 5.0rem auto 7.0rem;
+      padding: 0;
+      width: 36.6rem;
+      height: 6.4rem;
+      line-height: 6.0rem;
+    }
+    .help {
+      height: 48.5rem;
+    }
+  }
+
+  .clients {
+    height: 44.0rem;
+    h2 {
+      margin: 9.5rem auto 6.3rem;
+    }
+    .border {
+      margin-bottom: 5.5rem;
+    }
+    .client {
+      display: flex;
+      width: 113.0rem;
+      margin: 0 auto;
+      img {
+        margin: 0 auto;
+        padding-bottom: 2.9rem;
+      }
+    }
+  }
+
+  .about-us {
+    max-width: 114.0rem;
+    margin: 0 auto;
+    h2 {
+      margin: 13.0rem auto 6.4rem;
+    }
+    .border {
+      margin-bottom: 5.2rem;
+    }
+    .about {
+      display: flex;
+      justify-content: space-between;
+      img {
+        width: 26.5rem;
+        padding: 0;
+      }
+      .apply {
+        width: 26.5rem;
+        height: 35.5rem;
+        margin: 0;
+        h3 {
+          width: 11.0rem;
+          margin: 0 auto;
+          line-height: 1.5;
+        }
+        a {
+          width: 18.0rem;
+          height: 5.0rem;
+          padding: 1.3rem 0;
+        }
+      }
+    }
+  }
+
+  .video {
+    .video-img {
+      width: 100%;
+      height: 50.0rem;
+    }
+    .play {
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  .choose-us {
+    h2 {
+      margin: 12.3rem auto 6.4rem;
+    }
+    .border {
+      margin-bottom: 5.0rem;
+    }
+    .app-designs {
+      width: 100%;
+      // slickここから
+      ////////// テキスト含めたひとかたまりずつを動かすことが出来ませんでした
+      .design {
+        width: 42.0rem;
+        p {
+          font-size: 1.3rem;
+        }
+      }
+      // slickここまで
+    }
+    .quote {
+      height: 48.5rem;
+    }
+  }
+
+  .touch {
+    height: 32.2rem;
+    h2 {
+      margin: 12.8rem auto 6.4rem;
+    }
+    .border {
+      margin-bottom: 5.0rem;
+    }
+  }
+
+  .info {
+    display: flex;
+    height: 50.0rem;
+    .locations {
+      width: 40%;
+      height: 50.0rem;
+      .location {
+        width: 25.0rem;
+        margin: 7.0rem 0 0 21.0rem;
+        h2 {
+          margin-top: 0;
+          font-size: 2.2rem;
+          text-align: left;
+        }
+        p {
+          text-align: left;
+        }
+        ul {
+          justify-content: flex-start;
+          li {
+            i {
+              font-size: 2.5rem;
+              padding-left: 0;
+              margin-left: 0;
+              margin-right: 2.6rem;
+            }
+          }
+        }
+      }
+    }
+    .forms {
+      width: 60%;
+      height: 100%;
+      padding: 0;
+      .form {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: flex-end;
+        width: 61.0rem;
+        margin: 9.0rem auto;
+        input {
+          font-size: 2.2rem;
+        }
+        .name,
+        .email{
+          width: 27.4rem;
+        }
+        .name {
+          margin-right: 6.0rem;
+        }
+        input[type="textarea"] {
+          padding: 5.0rem 1.6rem 4.5rem;
+          width: 60.0rem;
+        }
+        input[type="submit"] {
+            width: 17.0rem;
+            height: 6.0rem;
+            margin-top: 1.6rem;
+        }
+      }
+    }
+
+  }
+
+  footer {
+    height: 36.0rem;
+    img {
+      width: 38.0rem;
+      margin-top: 7.0rem;
+    }
+    p {
+      font-size: 1.4rem;
+    }
+  }
+}
